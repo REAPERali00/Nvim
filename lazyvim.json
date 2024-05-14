@@ -5,7 +5,8 @@
     "lazyvim.plugins.extras.lang.tailwind"
   ],
   "news": {
-    "NEWS.md": "3314"
+    "NEWS.md": "3314",
+    "doc/news.txt": "25239"
   },
   "version": 3
 }
