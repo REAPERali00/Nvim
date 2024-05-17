@@ -1,11 +1,11 @@
 return {
   {
     "nvimdev/dashboard-nvim",
-    enabled = true,
+    enabled = false,
   },
   {
     "nvim-lualine/lualine.nvim",
-    enabled = true,
+    enabled = false,
   },
   -- messages, cmdline and the popupmenu
   {
