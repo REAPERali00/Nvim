@@ -10,5 +10,20 @@ return {
     end,
   },
   { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    { -- plugin spec for catppuccin
+      "catppuccin/nvim",
+    },
+    -- this belongs to no plugin spec and is ignored
+    lazy = false,
+    name = "catppuccin",
+    opts = {
+      transparent_background = true,
+    },
+
+    { -- plugin spec for LazyVim
+      "LazyVim/LazyVim",
+    },
+  },
 }
