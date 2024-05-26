@@ -2,11 +2,20 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     tag = "v0.9.1",
+    dependencies = {
+      { "windwp/nvim-ts-autotag" },
+    },
     opts = {
+      highlight = { enabled = true },
+      autopairs = { enabled = true },
+      autotag = { enabled = true },
+      indent = { enabled = true },
+
       ensure_installed = {
         "javascript",
         "typescript",
         "css",
+        "html",
         "gitignore",
         "graphql",
         "http",
@@ -15,6 +24,9 @@ return {
         "sql",
         "vim",
         "lua",
+        "python",
+        "tsx",
+        "bash",
       },
       query_linter = {
         enable = true,
