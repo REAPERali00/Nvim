@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    tag = "v0.9.1",
+    -- tag = "v0.9.1",
     dependencies = {
       { "windwp/nvim-ts-autotag" },
     },
