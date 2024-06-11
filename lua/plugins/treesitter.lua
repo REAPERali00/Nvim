@@ -27,6 +27,7 @@ return {
         "python",
         "tsx",
         "bash",
+        "cpp",
       },
       query_linter = {
         enable = true,
