@@ -72,7 +72,6 @@
   "persistence.nvim": { "branch": "main", "commit": "95d03ad5450389ad7dc2a0fab14ebb3d46bc2c96" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "refactoring.nvim": { "branch": "master", "commit": "e6b10b2346bd7e469a5f17099775ad906da153ae" },
-  "rest.nvim": { "branch": "main", "commit": "c7944769dc489b9e4bc493e40820c2818eab2569" },
   "sonokai": { "branch": "master", "commit": "a90d437f1f4e48825150065987d175e2a45fa39e" },
   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "a7ab9a957b17199183388c6f357d614fcaa508e5" },
