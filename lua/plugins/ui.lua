@@ -142,7 +142,7 @@ return {
     keys = {
       {
 
-        "<leader>d",
+        "<leader>m",
         "<cmd>NvimTreeClose<cr><cmd>tabnew<cr><bar><bar><cmd>DBUI<cr>",
       },
     },
