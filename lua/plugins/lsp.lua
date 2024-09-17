@@ -34,25 +34,25 @@ return {
           single_file_support = false,
           settings = {
             typescript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "literal",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = false,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
+              inlayhints = {
+                includeinlayparameternamehints = "literal",
+                includeinlayparameternamehintswhenargumentmatchesname = false,
+                includeinlayfunctionparametertypehints = true,
+                includeinlayvariabletypehints = false,
+                includeinlaypropertydeclarationtypehints = true,
+                includeinlayfunctionlikereturntypehints = true,
+                includeinlayenummembervaluehints = true,
               },
             },
             javascript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
+              inlayhints = {
+                includeinlayparameternamehints = "all",
+                includeinlayparameternamehintswhenargumentmatchesname = false,
+                includeinlayfunctionparametertypehints = true,
+                includeinlayvariabletypehints = true,
+                includeinlaypropertydeclarationtypehints = true,
+                includeinlayfunctionlikereturntypehints = true,
+                includeinlayenummembervaluehints = true,
               },
             },
           },
@@ -62,13 +62,13 @@ return {
           -- enabled = false,
           single_file_support = true,
           settings = {
-            Lua = {
+            lua = {
               workspace = {
-                checkThirdParty = false,
+                checkthirdparty = false,
               },
               completion = {
-                workspaceWord = true,
-                callSnippet = "Both",
+                workspaceword = true,
+                callsnippet = "both",
               },
               misc = {
                 parameters = {
@@ -77,44 +77,44 @@ return {
               },
               hint = {
                 enable = true,
-                setType = false,
-                paramType = true,
-                paramName = "Disable",
-                semicolon = "Disable",
-                arrayIndex = "Disable",
+                settype = false,
+                paramtype = true,
+                paramname = "disable",
+                semicolon = "disable",
+                arrayindex = "disable",
               },
               doc = {
-                privateName = { "^_" },
+                privatename = { "^_" },
               },
               type = {
-                castNumberToInteger = true,
+                castnumbertointeger = true,
               },
               diagnostics = {
                 disable = { "incomplete-signature-doc", "trailing-space" },
                 -- enable = false,
-                groupSeverity = {
-                  strong = "Warning",
-                  strict = "Warning",
+                groupseverity = {
+                  strong = "warning",
+                  strict = "warning",
                 },
-                groupFileStatus = {
-                  ["ambiguity"] = "Opened",
-                  ["await"] = "Opened",
-                  ["codestyle"] = "None",
-                  ["duplicate"] = "Opened",
-                  ["global"] = "Opened",
-                  ["luadoc"] = "Opened",
-                  ["redefined"] = "Opened",
-                  ["strict"] = "Opened",
-                  ["strong"] = "Opened",
-                  ["type-check"] = "Opened",
-                  ["unbalanced"] = "Opened",
-                  ["unused"] = "Opened",
+                groupfilestatus = {
+                  ["ambiguity"] = "opened",
+                  ["await"] = "opened",
+                  ["codestyle"] = "none",
+                  ["duplicate"] = "opened",
+                  ["global"] = "opened",
+                  ["luadoc"] = "opened",
+                  ["redefined"] = "opened",
+                  ["strict"] = "opened",
+                  ["strong"] = "opened",
+                  ["type-check"] = "opened",
+                  ["unbalanced"] = "opened",
+                  ["unused"] = "opened",
                 },
-                unusedLocalExclude = { "_*" },
+                unusedlocalexclude = { "_*" },
               },
               format = {
                 enable = false,
-                defaultConfig = {
+                defaultconfig = {
                   indent_style = "space",
                   indent_size = "2",
                   continuation_indent_size = "2",
@@ -133,5 +133,19 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
+  },
+  {
+    "lervag/vimtex",
+    lazy = false, -- lazy-loading will disable inverse search
+    config = function()
+      vim.g.vimtex_mappings_disable = { ["n"] = { "k" } } -- disable `k` as it conflicts with lsp hover
+      vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_compiler_engine = "lualatex"
+      vim.g.vimtex_enabled_file_types = { "tex", "md" }
+    end,
+    keys = {
+      { "<localleader>l", "", desc = "+vimtext" },
+    },
   },
 }
