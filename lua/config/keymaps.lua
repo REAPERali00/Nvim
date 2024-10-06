@@ -71,4 +71,9 @@ keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick Sw
 
 keymap.set("n", "<leader>n", "<cmd>lua require('notify').dismiss()<CR>", opts)
 
--- keymap.set("v","<leader>cn","<cmd>./"
+keymap.set(
+  "v",
+  "<leader>cn",
+  ":!python3 /home/alireza/.config/nvim/lua/script/cost.py<CR>",
+  { desc = "update cost table" }
+)
