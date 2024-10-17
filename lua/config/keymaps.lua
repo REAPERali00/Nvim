@@ -77,3 +77,9 @@ keymap.set(
   ":!python3 /home/alireza/.config/nvim/lua/script/cost.py<CR>",
   { desc = "update cost table" }
 )
+
+-- lua snippets
+keymap.set("i", "<Tab>", "luasnip#jump(1)", { expr = true, silent = true })
+keymap.set("s", "<Tab>", "luasnip#jump(1)", { expr = true, silent = true }) -- s is for selection right after insertion
+keymap.set("i", "<S-Tab>", "luasnip#jump(-1)", { expr = true, silent = true })
+keymap.set("s", "<S-Tab>", "luasnip#jump(-1)", { expr = true, silent = true })
