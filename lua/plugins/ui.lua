@@ -204,7 +204,7 @@ return {
       })
 
       if vim.fn.argc(-1) == 0 then
-        vim.cmd("NvimTreeFocus")
+        vim.cmd("Neotree focus")
       end
     end,
   },
