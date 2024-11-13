@@ -1,7 +1,6 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
---
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -79,7 +78,21 @@ keymap.set(
 )
 
 -- lua snippets
-keymap.set("i", "<Tab>", "luasnip#jump(1)", { expr = true, silent = true })
-keymap.set("s", "<Tab>", "luasnip#jump(1)", { expr = true, silent = true }) -- s is for selection right after insertion
-keymap.set("i", "<S-Tab>", "luasnip#jump(-1)", { expr = true, silent = true })
-keymap.set("s", "<S-Tab>", "luasnip#jump(-1)", { expr = true, silent = true })
+-- Only set up the keymaps if luasnip is available
+vim.keymap.set({ "i", "s" }, "<Tab>", function()
+  local luasnip = require("luasnip")
+  if luasnip.expand_or_jumpable() then
+    luasnip.expand_or_jump()
+  else
+    return "<Tab>"
+  end
+end, { expr = true, silent = true })
+
+vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+  local luasnip = require("luasnip")
+  if luasnip.jumpable(-1) then
+    luasnip.jump(-1)
+  else
+    return "<S-Tab>"
+  end
+end, { expr = true, silent = true })
