@@ -96,3 +96,6 @@ vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
     return "<S-Tab>"
   end
 end, { expr = true, silent = true })
+
+-- adding command to run a local run.sh script
+keymap.set("n", "<leader><CR>", ":!./run.sh<CR>", { noremap = true, silent = true })
