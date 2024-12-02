@@ -68,7 +68,7 @@ keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>", { desc = "Create New Note"
 keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Search Obsidian" })
 keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick Switch" })
 
-keymap.set("n", "<leader>n", "<cmd>lua require('notify').dismiss()<CR>", opts)
+-- keymap.set("n", "<leader>nc", "<cmd>lua require('notify').dismiss()<CR>", opts)
 
 keymap.set(
   "v",
