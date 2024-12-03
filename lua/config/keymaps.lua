@@ -98,4 +98,8 @@ vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
 end, { expr = true, silent = true })
 
 -- adding command to run a local run.sh script
-keymap.set("n", "<leader><CR>", ":!./run.sh<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "<leader><CR>", ":!./run.sh<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader><CR>", function()
+  -- Run the tmux command to split the pane and execute the script
+  vim.fn.system("tmux split-pane -v -p 20 \"zsh -c './run.sh; exec zsh'\"")
+end, { noremap = true, silent = true })
