@@ -366,6 +366,7 @@ return {
           dotfiles = true,
           custom = {
             "node_modules/.*",
+            "bin/.*",
           },
         },
         log = {
