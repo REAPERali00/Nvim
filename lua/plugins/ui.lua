@@ -381,9 +381,9 @@ return {
         },
       })
 
-      -- if vim.fn.argc(-1) == 0 then
-      --   vim.cmd("Neotree focus")
-      -- end
+      if vim.fn.argc(-1) == 0 then
+        vim.cmd("Neotree focus")
+      end
     end,
   },
 }
