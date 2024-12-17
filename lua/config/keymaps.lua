@@ -104,4 +104,4 @@ keymap.set("n", "<leader><CR>", function()
   vim.fn.system("tmux split-pane -v -p 20 \"zsh -c './run.sh; exec zsh'\"")
 end, { noremap = true, silent = true })
 
-keymap.set("v", "<leader>ma", ":!bc<CR>")
+keymap.set("v", "<leader>ma", ":! echo $1 | bc<CR>")
