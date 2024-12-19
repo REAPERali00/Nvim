@@ -12,6 +12,7 @@ return {
         "css-lsp",
         "csharpier",
         "netcoredbg",
+        "csharp-language-server",
       })
     end,
   },
