@@ -17,3 +17,8 @@ ls.add_snippets("all", {
     t("Alireza Jadidi"),
   }),
 })
+ls.add_snippets("cs", {
+  s("crl", {
+    t("Console.ReadLine();"),
+  }),
+})
