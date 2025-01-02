@@ -26,7 +26,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "habamax",
+        colorscheme = "sonokai",
         transparent_background = true,
       },
     },
