@@ -22,3 +22,9 @@ ls.add_snippets("cs", {
     t("Console.ReadLine();"),
   }),
 })
+
+ls.add_snippets("sh", {
+  s("bash", {
+    t("#!/bin/bash"),
+  }),
+})
