@@ -28,3 +28,10 @@ ls.add_snippets("sh", {
     t("#!/bin/bash"),
   }),
 })
+ls.add_snippets("python", {
+  s("printf", {
+    t("print(f'"),
+    i(1, "text"),
+    t("')"),
+  }),
+})
