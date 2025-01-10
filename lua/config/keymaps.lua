@@ -100,9 +100,12 @@ end, { expr = true, silent = true })
 -- adding command to run a local run.sh script
 -- keymap.set("n", "<leader><CR>", ":!./run.sh<CR>", { noremap = true, silent = true })
 keymap.set("n", "<leader><CR>", function()
-  -- Run the tmux command to split the pane and execute the script
-  -- vim.fn.system("tmux split-pane -v -p 20 \"zsh -c './run.sh; exec zsh'\"")
-  vim.fn.system("tmux split-pane -v -p 20 \"zsh -c './run.sh; exec zsh'\"")
+  -- Get the current working directory from Neovim
+  local cwd = vim.fn.getcwd()
+
+  -- Run the tmux command to split the pane and execute the script in the correct directory
+  local command = string.format("tmux split-pane -v -p 20 -c '%s' \"zsh -c './run.sh; exec zsh'\"", cwd)
+  vim.fn.system(command)
 end, { noremap = true, silent = true })
 
 keymap.set("v", "<leader>ma", ":! echo $1 | bc<CR>")
