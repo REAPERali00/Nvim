@@ -108,4 +108,4 @@ keymap.set("n", "<leader><CR>", function()
   vim.fn.system(command)
 end, { noremap = true, silent = true })
 
-keymap.set("v", "<leader>ma", ":! echo $1 | bc<CR>")
+keymap.set("v", "<leader>ma", ":<C-U>'<,'>!bc<CR>", { desc = "Evaluate arithmetic expression with bc" })
