@@ -3,8 +3,10 @@
 This configuration uses:
 
 - Java
-- Js
-- Ts
+- Js / Ts
+- lua
+- Cpp and C
+- C sharp
 - Markdown
 - Python
 - Obsidian
@@ -36,6 +38,7 @@ git clone https://github.com/REAPERali00/Nvim.git ~/.config/nvim
 - openjdk
 - python and pip
 - gcc
+- Dotnet
 
 #### Tools support
 
