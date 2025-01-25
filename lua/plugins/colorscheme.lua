@@ -2,7 +2,14 @@ return {
   {
     { "rebelot/kanagawa.nvim" },
     { "rose-pine/neovim", name = "rose-pine" },
-    { "sainnhe/everforest" },
+    {
+      "neanias/everforest-nvim",
+      config = function()
+        require("everforest").setup({
+          transparent_background_level = 1,
+        })
+      end,
+    },
     { "bluz71/vim-nightfly-colors" },
     { "NLKNguyen/papercolor-theme" },
     { "romainl/Apprentice" },
@@ -26,8 +33,8 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "sonokai",
-        transparent_background = true,
+        colorscheme = "everforest",
+        -- transparent_background = true,
       },
     },
   },
