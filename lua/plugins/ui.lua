@@ -315,4 +315,53 @@ return {
       end
     end,
   },
+  -- documentation: https://github.com/MeanderingProgrammer/render-markdown.nvim/wiki
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+    opts = {
+      code = {
+        sign = false,
+        width = "block",
+        right_pad = 1,
+      },
+      heading = {
+        enabled = true,
+        sign = true,
+        icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+        signs = { "󰫎 " },
+        width = "block",
+      },
+      checkbox = {
+        enabled = true,
+        checked = { scope_highlight = "@markup.strikethrough" },
+      },
+      dash = {
+        width = 50,
+      },
+      sign = {
+        enabled = true,
+        highlight = "RenderMarkdownSign",
+      },
+      bullet = {
+        left_pad = 2,
+        right_pad = 2,
+      },
+      latex = {
+        enabled = true,
+        converter = "latex2text",
+        highlight = "RenderMarkdownMath",
+        top_pad = 0,
+        bottom_pad = 0,
+      },
+      -- We can Customize check boxes this way
+      -- checkbox = {
+      --   enabled = true,
+      --   unchecked = { icon = "✘ " },
+      --   checked = { icon = "✔ " },
+      --   custom = { todo = { rendered = "◯ " } },
+      --
+      -- },
+    },
+  },
 }
