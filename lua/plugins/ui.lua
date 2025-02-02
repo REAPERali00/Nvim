@@ -22,6 +22,11 @@ return {
       quickfile = { enabled = true },
       statuscolumn = { enabled = true },
       words = { enabled = true },
+      zen = {
+        toggles = {
+          dim = false,
+        },
+      },
       styles = {
         notification = {
           wo = { wrap = true }, -- Wrap notifications
