@@ -19,11 +19,26 @@ keymap.set("n", "<Leader>a", ":update<Return>", opts)
 keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
 
 -- File explorer with NvimTree
-keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
-keymap.set("n", "<Leader>t", ":NvimTreeToggle<Return>", opts)
+-- keymap.set("n", "<Leader>f", ":NvimTreeFindFile<Return>", opts)
+-- keymap.set("n", "<Leader>t", ":NvimTreeToggle<Return>", opts)
+
+-- Stay in indent mode after indenting
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
+
+-- Keep last yanked and don't replace it when pasting
+keymap.set("v", "p", '"_dP', opts)
+
+-- Stay at center when scrolling
+keymap.set("n", "<C-d>", "<C-d>zz", opts)
+keymap.set("n", "<C-u>", "<C-u>zz", opts)
+
+-- Stay at center when going to next word in search
+keymap.set("n", "n", "nzzzv", opts)
+keymap.set("n", "N", "Nzzzv", opts)
 
 -- Tabs
-keymap.set("n", "te", ":tabedit")
+keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("n", "tw", ":tabclose<Return>", opts)
@@ -50,7 +65,7 @@ keymap.set("n", "<C-j>", function()
 end, opts)
 
 -- Rempap
-keymap.set("i", "jj", "<Esc>")
+keymap.set("i", "jj", "<Esc>", opts)
 
 -- Obsidian
 keymap.set(
