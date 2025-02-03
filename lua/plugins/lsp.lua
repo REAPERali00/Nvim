@@ -137,18 +137,4 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
-  -- {
-  --   "lervag/vimtex",
-  --   lazy = false, -- lazy-loading will disable inverse search
-  --   config = function()
-  --     vim.g.vimtex_mappings_disable = { ["n"] = { "k" } } -- disable `k` as it conflicts with lsp hover
-  --     vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
-  --     vim.g.vimtex_view_method = "zathura"
-  --     vim.g.vimtex_compiler_engine = "lualatex"
-  --     vim.g.vimtex_enabled_file_types = { "tex", "md" }
-  --   end,
-  --   keys = {
-  --     { "<localleader>l", "", desc = "+vimtext" },
-  --   },
-  -- },
 }

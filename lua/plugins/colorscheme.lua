@@ -3,8 +3,15 @@ return {
     { "rebelot/kanagawa.nvim" },
     {
       "shaunsingh/nord.nvim",
-      lazy = true,
+      lazy = false,
       priority = 1000,
+      config = function()
+        vim.g.nord_contrast = true
+        vim.g.nord_borders = false
+        vim.g.nord_disable_background = true
+        vim.g.nord_uniform_diff_background = true
+        vim.g.nod_bold = false
+      end,
     },
     {
       "craftzdog/solarized-osaka.nvim",
@@ -85,6 +92,8 @@ return {
     },
     {
       "neanias/everforest-nvim",
+      lazy = false,
+      priority = 1000,
       config = function()
         require("everforest").setup({
           transparent_background_level = 1,
@@ -96,6 +105,7 @@ return {
     { "romainl/Apprentice" },
     {
       "sainnhe/sonokai",
+      lazy = false,
       priority = 1000,
       config = function()
         vim.g.sonokai_transparent_background = "1"
@@ -106,7 +116,7 @@ return {
     },
     {
       "eldritch-theme/eldritch.nvim",
-      lazy = true,
+      lazy = false,
       name = "eldritch",
       opts = {
         -- This function is found in the documentation
@@ -148,6 +158,8 @@ return {
     },
     {
       "catppuccin",
+      lazy = false,
+      priority = 1000,
       opts = {
         transparent_background = true,
       },
@@ -155,7 +167,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "rose-pine",
+        colorscheme = "nord",
       },
     },
   },

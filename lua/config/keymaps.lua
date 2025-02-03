@@ -30,8 +30,8 @@ keymap.set("v", ">", ">gv", opts)
 keymap.set("v", "p", '"_dP', opts)
 
 -- Stay at center when scrolling
-keymap.set("n", "<C-d>", "<C-d>zz", opts)
-keymap.set("n", "<C-u>", "<C-u>zz", opts)
+-- keymap.set("n", "<C-d>", "<C-d>zz", opts)
+-- keymap.set("n", "<C-u>", "<C-u>zz", opts)
 
 -- Stay at center when going to next word in search
 keymap.set("n", "n", "nzzzv", opts)
