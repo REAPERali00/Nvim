@@ -9,8 +9,11 @@ vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
-vim.opt.number = true
-
+vim.opt.number = true -- line nubmer
+vim.opt.mouse = "a" --mouse functionality
+vim.opt.ignorecase = true --search ignores case unless \C is used
+vim.opt.smartcase = true
+vim.opt.signcolumn = "yes" -- Display signs on the side column
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
