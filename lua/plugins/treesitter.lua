@@ -32,6 +32,7 @@ return {
         "bash",
         "cpp",
         "c_sharp",
+        "java",
       },
       query_linter = {
         enable = true,
