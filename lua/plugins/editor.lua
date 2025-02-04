@@ -45,7 +45,7 @@ return {
       {
         ";f",
         function()
-          require("fzf-lua").files({ hidden = false, fd_opts = "--no-ignore" })
+          require("fzf-lua").files({ hidden = false, fd_opts = "--no-ignore -t f" })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
       },
