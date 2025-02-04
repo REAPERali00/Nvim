@@ -30,9 +30,10 @@ return {
         "python",
         "tsx",
         "bash",
-        "cpp",
         "c_sharp",
         "java",
+        "c",
+        "cpp",
       },
       query_linter = {
         enable = true,
