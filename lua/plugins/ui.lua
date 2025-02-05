@@ -91,7 +91,7 @@ return {
         desc = "Lazygit Current File History",
       },
       {
-        "<leader>gg",
+        ";c",
         function()
           Snacks.lazygit()
         end,
@@ -217,22 +217,6 @@ return {
         end,
       })
     end,
-  },
-  -- LazyGit integration with Telescope
-  {
-    "kdheepak/lazygit.nvim",
-    keys = {
-      {
-        ";c",
-        ":LazyGit<Return>",
-        silent = true,
-        noremap = true,
-      },
-    },
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
   },
   {
     "kristijanhusak/vim-dadbod-ui",
