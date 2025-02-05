@@ -119,13 +119,6 @@ return {
         desc = "Toggle Terminal",
       },
       {
-        "<c-_>",
-        function()
-          Snacks.terminal()
-        end,
-        desc = "which_key_ignore",
-      },
-      {
         "]]",
         function()
           Snacks.words.jump(vim.v.count1)
@@ -236,7 +229,6 @@ return {
     end,
     keys = {
       {
-
         "<leader>m",
         "<cmd>NvimTreeClose<cr><cmd>tabnew<cr><bar><bar><cmd>DBUI<cr>",
       },
@@ -324,6 +316,7 @@ return {
       checkbox = {
         enabled = true,
         checked = { scope_highlight = "@markup.strikethrough" },
+        right_pad = 1,
       },
       dash = {
         width = 50,
@@ -333,8 +326,8 @@ return {
         highlight = "RenderMarkdownSign",
       },
       bullet = {
-        left_pad = 2,
-        right_pad = 2,
+        left_pad = 1,
+        right_pad = 1,
       },
       latex = {
         enabled = true,
