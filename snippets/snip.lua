@@ -34,4 +34,9 @@ ls.add_snippets("python", {
     i(1, "text"),
     t("')"),
   }),
+  s("comment", {
+    t('"""'),
+    i(1, "block comment"),
+    t('"""'),
+  }),
 })
