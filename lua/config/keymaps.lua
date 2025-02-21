@@ -75,6 +75,27 @@ keymap.set(
   { desc = "Obsidian Check Checkbox" }
 )
 
+-- funciton to set check boxes
+local function make_checkbox()
+  -- Get visual selection range
+  local start_line, start_col = unpack(vim.api.nvim_buf_get_mark(0, "<"))
+  local end_line, end_col = unpack(vim.api.nvim_buf_get_mark(0, ">"))
+
+  -- Iterate over each line in selection
+  for i = start_line, end_line do
+    local line = vim.api.nvim_buf_get_lines(0, i - 1, i, false)[1]
+
+    -- Check if line already has a checkbox
+    if line and not line:match("^%- %[.%] ") then
+      -- Insert "- [ ] " at the beginning of the line
+      vim.api.nvim_buf_set_text(0, i - 1, 0, i - 1, 0, { "- [ ] " .. line })
+    end
+  end
+end
+
+-- Keymap for visual mode transformation
+keymap.set("v", "<leader>oc", make_checkbox, opts)
+
 keymap.set("n", "<leader>ot", "<cmd>ObsidianTemplate<CR>", { desc = "Insert Obsidian Template" })
 keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in Obsidian App" })
 keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", { desc = "Show ObsidianBacklinks" })
