@@ -2,6 +2,20 @@ return {
   {
     { "rebelot/kanagawa.nvim" },
     {
+      "NLKNguyen/papercolor-theme",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        return {
+          theme = {
+            default = {
+              transparent_background = 1,
+            },
+          },
+        }
+      end,
+    },
+    {
       "shaunsingh/nord.nvim",
       lazy = false,
       priority = 1000,
@@ -20,7 +34,6 @@ return {
       opts = function()
         return {
           transparent = true,
-
           styles = {
             sidebars = "transparent",
             floats = "transparent",
@@ -167,7 +180,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "rose-pine",
+        colorscheme = "catppuccin-macchiato",
       },
     },
   },

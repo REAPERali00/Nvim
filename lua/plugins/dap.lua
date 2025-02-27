@@ -3,6 +3,7 @@ return {
   optional = true,
   opts = function()
     local dap = require("dap")
+    require("dap.ext.vscode").load_launchjs()
     if not dap.adapters["netcoredbg"] then
       require("dap").adapters["netcoredbg"] = {
         type = "executable",
