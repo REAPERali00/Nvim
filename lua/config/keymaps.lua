@@ -11,7 +11,7 @@ keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Auto correct
-keymap.set("n", "<leader>z", "1z=", { noremap = true, silent = true })
+keymap.set("n", "<leader>z", "1z=", opts)
 
 -- Save file and quit
 keymap.set("n", "<Leader>a", ":update<Return>", opts)
@@ -145,3 +145,15 @@ keymap.set("n", "<leader><CR>", function()
 end, { noremap = true, silent = true })
 
 keymap.set("v", "<leader>ma", ":<C-U>'<,'>!bc<CR>", { desc = "Evaluate arithmetic expression with bc" })
+keymap.set(
+  "n",
+  "<leader>cn",
+  ":cnext<CR>",
+  { noremap = true, silent = true, desc = "go to the next ref in quick fix list" }
+)
+keymap.set(
+  "n",
+  "<leader>cN",
+  ":cprev<CR>",
+  { noremap = true, silent = true, desc = "go to the prev ref in quick fix list" }
+)
