@@ -6,6 +6,7 @@ return {
       lazy = false,
       priority = 1000,
       config = function()
+        vim.go.background = "light"
         return {
           theme = {
             default = {
@@ -180,7 +181,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "catppuccin-macchiato",
+        colorscheme = "tokyonight-day",
       },
     },
   },
