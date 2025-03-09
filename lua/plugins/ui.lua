@@ -327,18 +327,16 @@ return {
         enabled = true,
         highlight = "RenderMarkdownSign",
       },
-      bullet = {
-        left_pad = 1,
-        right_pad = 1,
-      },
-      latex = {
-        enabled = true,
-        converter = "latex2text",
-        highlight = "RenderMarkdownMath",
-        top_pad = 0,
-        bottom_pad = 0,
-      },
-      -- We can Customize check boxes this way
+      -- bullet = {
+      --   left_pad = 1,
+      --   right_pad = 1,
+      --   enabled = true,
+      --   converter = "latex2text",
+      --   highlight = "RenderMarkdownMath",
+      --   top_pad = 0,
+      --   bottom_pad = 0,
+      -- },
+      --   -- We can Customize check boxes this way
       -- checkbox = {
       --   enabled = true,
       --   unchecked = { icon = "✘ " },
