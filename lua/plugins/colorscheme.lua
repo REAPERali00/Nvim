@@ -6,10 +6,16 @@ return {
       lazy = false,
       priority = 1000,
       config = function()
-        vim.go.background = "light"
-        return {
+        -- vim.go.background = "light"
+        vim.g.PaperColor_Theme_Options = {
           theme = {
-            default = {
+            ["default"] = {
+              transparent_background = 1,
+            },
+            ["default.light"] = {
+              transparent_background = 1,
+            },
+            ["default.dark"] = {
               transparent_background = 1,
             },
           },
@@ -181,7 +187,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "tokyonight-day",
+        colorscheme = "nord",
       },
     },
   },
