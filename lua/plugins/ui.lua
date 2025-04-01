@@ -291,10 +291,8 @@ return {
         },
       })
 
-      vim.cmd("Neotree focus")
-      if vim.fn.argc(-1) > 0 then
-        -- elseif vim.fn.argc(-1) > 0 then
-        vim.cmd("Neotree toggle")
+      if vim.fn.argc(-1) == 0 then
+        vim.cmd("Neotree focus")
       end
     end,
   },
