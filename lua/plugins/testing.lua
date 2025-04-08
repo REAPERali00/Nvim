@@ -5,6 +5,7 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
+      "nvim-neotest/neotest-python",
       "nvim-neotest/neotest-jest",
       "nvim-neotest/neotest-plenary",
     },
@@ -15,6 +16,11 @@ return {
       -- The adapter will then be automatically loaded with the config.
       adapters = {
         ["neotest-plenary"] = {},
+        ["neotest-python"] = {
+          -- Here you can specify the settings for the adapter, i.e.
+          runner = "pytest",
+          -- python = ".venv/bin/python",
+        },
         ["neotest-jest"] = {
           jestConfigFile = function()
             local file = vim.fn.expand("%:p")
