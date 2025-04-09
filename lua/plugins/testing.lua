@@ -3,11 +3,18 @@ return {
     "nvim-neotest/neotest",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "nvim-neotest/nvim-nio",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-python",
       "nvim-neotest/neotest-jest",
       "nvim-neotest/neotest-plenary",
+      "mfussenegger/nvim-jdtls",
+      "mfussenegger/nvim-dap", -- for the debugger
+      "rcarriga/nvim-dap-ui", -- recommended
+      "theHamsta/nvim-dap-virtual-text", -- recommended
+      "alfaix/neotest-gtest", -- Cpp testing
+      "sidlatau/neotest-dart", -- flutter/dart
     },
     opts = {
       -- Can be a list of adapters like what neotest expects,
@@ -16,11 +23,17 @@ return {
       -- The adapter will then be automatically loaded with the config.
       adapters = {
         ["neotest-plenary"] = {},
+        ["neotest-dart"] = {},
         ["neotest-python"] = {
           -- Here you can specify the settings for the adapter, i.e.
           runner = "pytest",
           -- python = ".venv/bin/python",
         },
+        ["neotest-java"] = {
+          junit_jar = nil, -- default: stdpath("data") .. /nvim/neotest-java/junit-platform-console-standalone-[version].jar
+          incremental_build = true,
+        },
+        ["neotest-gtest"] = {},
         ["neotest-jest"] = {
           jestConfigFile = function()
             local file = vim.fn.expand("%:p")
