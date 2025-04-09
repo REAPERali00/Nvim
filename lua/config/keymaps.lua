@@ -15,7 +15,7 @@ keymap.set("n", "<leader>z", "1z=", opts)
 
 -- Save file and quit
 keymap.set("n", "<Leader>a", ":update<Return>", opts)
-keymap.set("n", "<Leader>A", ":wa<Return>", opts)
+keymap.set("n", "<Leader>A", ":wa<Return>", { noremap = true, silent = true, desc = "Save all files" })
 -- keymap.set("n", "<Leader>q", ":quit<Return>", opts)
 keymap.set("n", "<Leader>Q", ":qa<Return>", opts)
 
