@@ -40,12 +40,13 @@ return {
 
   {
     "ibhagwan/fzf-lua",
+    dependencies = { "echasnovski/mini.icons" },
     priority = 1000,
     keys = {
       {
         ";f",
         function()
-          require("fzf-lua").files({ hidden = false, fd_opts = "--no-ignore -t f" })
+          require("fzf-lua").files({ hidden = false, fd_opts = " -t f " })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
       },
