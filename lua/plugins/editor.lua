@@ -114,4 +114,11 @@ return {
       })
     end,
   },
+  -- commenting support for nvim
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      -- add any options here
+    },
+  },
 }
