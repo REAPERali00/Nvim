@@ -6,6 +6,9 @@ return {
     opts = {},
   },
   {
+    "vuciv/golf",
+  },
+  {
     "echasnovski/mini.surround",
     recommended = true,
     keys = function(_, keys)
