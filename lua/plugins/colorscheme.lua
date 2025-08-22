@@ -188,7 +188,7 @@ return {
       "e-ink-colorscheme/e-ink.nvim",
       priority = 1000,
       config = function()
-        require("e-ink").setup()
+        -- require("e-ink").setup()
         -- vim.cmd.colorscheme "e-ink"
         -- choose light mode or dark mode
         -- vim.opt.background = "dark"
@@ -207,7 +207,7 @@ return {
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "e-ink",
+        colorscheme = "tokyonight",
       },
     },
   },
