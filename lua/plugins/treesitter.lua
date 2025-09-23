@@ -19,7 +19,6 @@ return {
         "gitignore",
         "graphql",
         "http",
-        "latex",
         "markdown",
         "markdown_inline",
         "json",

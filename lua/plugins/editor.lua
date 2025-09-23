@@ -1,7 +1,7 @@
 return {
   -- Hihglight colors
   {
-    "echasnovski/mini.hipatterns",
+    "nvim-mini/mini.hipatterns",
     event = "BufReadPre",
     opts = {},
   },
@@ -9,7 +9,7 @@ return {
     "vuciv/golf",
   },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     recommended = true,
     keys = function(_, keys)
       -- Populate the keys based on the user's options
@@ -43,7 +43,7 @@ return {
 
   {
     "ibhagwan/fzf-lua",
-    dependencies = { "echasnovski/mini.icons" },
+    dependencies = { "nvim-mini/mini.icons" },
     priority = 1000,
     keys = {
       {

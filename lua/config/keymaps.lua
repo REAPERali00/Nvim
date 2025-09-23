@@ -76,6 +76,8 @@ keymap.set(
   { desc = "Obsidian Check Checkbox" }
 )
 
+keymap.set("v", "<CR>", "<cmd>lua require('obsidian').util.toggle_checkbox()<CR>", { desc = "Obsidian Check Checkbox" })
+
 -- funciton to set check boxes
 local function make_checkbox()
   -- Get visual selection range
