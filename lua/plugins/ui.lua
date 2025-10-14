@@ -180,6 +180,20 @@ return {
           Snacks.toggle.inlay_hints():map("<leader>uh")
         end,
       })
+      -- Disable diagnostics for markdown
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "markdown", "markdown.mdx" },
+        callback = function()
+          -- vim.diagnostic.disable(0)
+          vim.diagnostic.enable(false)
+          -- optional toast; safe guard
+          if _G.Snacks and Snacks.notify then
+            Snacks.notify("Diagnostics disabled for Markdown", { level = "info", timeout = 1000 })
+          else
+            vim.notify("Diagnostics disabled for Markdown", vim.log.levels.INFO)
+          end
+        end,
+      })
     end,
   },
   -- filename
@@ -446,4 +460,6 @@ return {
       },
     },
   },
+
 }
+
