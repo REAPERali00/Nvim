@@ -33,6 +33,7 @@ return {
         "java",
         "c",
         "cpp",
+        "latex",
       },
       query_linter = {
         enable = true,
