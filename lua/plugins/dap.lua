@@ -1,5 +1,8 @@
 return {
   "mfussenegger/nvim-dap",
+  dependencies =  {
+    "mfussenegger/nvim-dap-python",
+  }, 
   optional = true,
   opts = function()
     local dap = require("dap")
